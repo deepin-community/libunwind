@@ -39,9 +39,7 @@ endif
 endif
 
 override_dh_auto_test:
-ifeq (,$(findstring nocheck, $(DEB_BUILD_OPTIONS)))
 	-$(MAKE) check
-endif # nocheck
 
 override_dh_strip:
 	dh_strip -plibunwind8 -plibunwind-setjmp0

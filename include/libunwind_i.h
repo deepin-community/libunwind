@@ -55,6 +55,8 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.  */
 #include <string.h>
 #include <unistd.h>
 #include <sys/mman.h>
+#include <errno.h>
+#include <stdio.h>
 
 #if defined(HAVE_ELF_H)
 # include <elf.h>
@@ -130,7 +132,7 @@ byte_order_is_big_endian(int byte_order)
 }
 
 static inline int
-target_is_big_endian()
+target_is_big_endian(void)
 {
     return byte_order_is_big_endian(UNW_BYTE_ORDER);
 }
@@ -170,7 +172,7 @@ target_is_big_endian()
 
 /* Type of a mask that can be used to inhibit preemption.  At the
    userlevel, preemption is caused by signals and hence sigset_t is
-   appropriate.  In constrast, the Linux kernel uses "unsigned long"
+   appropriate.  In contrast, the Linux kernel uses "unsigned long"
    to hold the processor "flags" instead.  */
 typedef sigset_t intrmask_t;
 
@@ -288,6 +290,13 @@ print_error (const char *string)
   return write (2, string, strlen (string));
 }
 
+HIDDEN extern long unw_page_size;
+
+static inline unw_word_t uwn_page_start(unw_word_t addr)
+{
+  return addr & ~(unw_page_size - 1);
+}
+
 #define mi_init         UNWI_ARCH_OBJ(mi_init)
 
 extern void mi_init (void);     /* machine-independent initializations */
@@ -345,6 +354,10 @@ static inline void invalidate_edi (struct elf_dyn_info *edi)
 #endif /* !PT_ARM_EXIDX */
 
 #include "tdep/libunwind_i.h"
+
+#ifndef TDEP_DWARF_SP
+#define TDEP_DWARF_SP UNW_TDEP_SP
+#endif
 
 #ifndef tdep_get_func_addr
 # define tdep_get_func_addr(as,addr,v)          (*(v) = addr, 0)
