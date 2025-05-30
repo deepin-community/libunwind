@@ -10,6 +10,9 @@ ifneq (,$(filter $(DEB_HOST_ARCH), amd64 i386))
   CXX_EXCEPTIONS=--enable-cxx-exceptions
 endif
 
+ifneq (,$(filter $(DEB_HOST_ARCH), sw64 sw_64))
+  CFLAGS=-fcommon
+endif
 %:
 	dh $@
 
