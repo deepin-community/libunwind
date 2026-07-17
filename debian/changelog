@@ -1,32 +1,28 @@
-libunwind (1.7.2-0deepin3) unstable; urgency=medium
+libunwind (1.8.1-0.1) unstable; urgency=medium
 
-  * feat: add sw64 support.
+  * Non-maintainer upload.
+  * New upstream version 1.8.1 (Closes: #1082659, #1091302, #1082284)
+  * Refresh or drop patches
 
- -- hudeng <hudeng@deepin.org>  Fri, 30 May 2025 09:09:13 +0800
+ -- Noah Meyerhans <noahm@debian.org>  Tue, 24 Dec 2024 11:48:51 -0500
 
-libunwind (1.7.2-0deepin2) beige; urgency=medium
+libunwind (1.7.2-1) unstable; urgency=low
 
-  * Build for loong64.
+  * New upstream release. (Closes: #1054285)
+  * Enable building on loong64. (Closes: #1051757)
+  * Backport fix for powerpc FTBFS.
+  * Backport fix for armel/armhf Ltest-init-local-signal test hang.
+  * Backport fix for armel/armhf unw_getcontext() miscompilation.
+  * Update Homepage and debian/watch for new upstream location.
 
- -- Tianyu Chen <sweetyfish@deepin.org>  Thu, 28 Dec 2023 15:11:42 +0800
+ -- Adrian Bunk <bunk@debian.org>  Thu, 19 Sep 2024 07:01:10 +0300
 
-libunwind (1.7.2-0deepin1) beige; urgency=medium
+libunwind (1.6.2-3.1) unstable; urgency=medium
 
-  * New upstream release.
+  * Non-maintainer upload.
+  * Stop installing empty /lib directory. (Closes: #1060799)
 
- -- Tianyu Chen <sweetyfish@deepin.org>  Thu, 28 Dec 2023 14:45:51 +0800
-
-libunwind (1.7.0-0deepin1) beige; urgency=medium
-
-  * New upstream release.
-
- -- Tianyu Chen <sweetyfish@deepin.org>  Thu, 28 Dec 2023 14:34:46 +0800
-
-libunwind (1.7.0~rc2-1) experimental; urgency=medium
-
-  * New upstream release.
-
- -- Adrian Bunk <bunk@debian.org>  Mon, 13 Feb 2023 01:19:52 +0200
+ -- Chris Hofstaedtler <zeha@debian.org>  Thu, 30 May 2024 01:17:49 +0200
 
 libunwind (1.6.2-3) unstable; urgency=low
 

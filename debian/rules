@@ -10,9 +10,6 @@ ifneq (,$(filter $(DEB_HOST_ARCH), amd64 i386))
   CXX_EXCEPTIONS=--enable-cxx-exceptions
 endif
 
-ifneq (,$(filter $(DEB_HOST_ARCH), sw64 sw_64))
-  CFLAGS=-fcommon
-endif
 %:
 	dh $@
 
@@ -42,7 +39,9 @@ endif
 endif
 
 override_dh_auto_test:
+ifeq (,$(findstring nocheck, $(DEB_BUILD_OPTIONS)))
 	-$(MAKE) check
+endif # nocheck
 
 override_dh_strip:
 	dh_strip -plibunwind8 -plibunwind-setjmp0

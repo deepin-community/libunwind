@@ -107,6 +107,9 @@
 /* Define to 1 if you have the <execinfo.h> header file. */
 #undef HAVE_EXECINFO_H
 
+/* Define to 1 if you have the `execvpe' function. */
+#undef HAVE_EXECVPE
+
 /* Define to 1 if you have the `getunwind' function. */
 #undef HAVE_GETUNWIND
 
@@ -115,9 +118,6 @@
 
 /* Define to 1 if you have the <inttypes.h> header file. */
 #undef HAVE_INTTYPES_H
-
-/* Define to 1 if you have the `uca' library (-luca). */
-#undef HAVE_LIBUCA
 
 /* Define to 1 if you have the <link.h> header file. */
 #undef HAVE_LINK_H
