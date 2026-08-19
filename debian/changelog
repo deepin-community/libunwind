@@ -1,3 +1,12 @@
+libunwind (1.8.1-0.1deepin2) unstable; urgency=medium
+
+  * backport: restore sw64 support dropped by 1.8.1 update
+    - restore sw64 architecture entries and CFLAGS in debian/control, debian/rules
+    - define UNW_WORD_MAX in libunwind-sw_64.h
+    - add iterate_phdr_function to sw64 struct unw_addr_space
+
+ -- lichenggang <lichenggang@uniontech.com>  Wed, 19 Aug 2026 15:27:56 +0800
+
 libunwind (1.8.1-0.1deepin1) unstable; urgency=medium
 
   * Restore deepin patches on libunwind

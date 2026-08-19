@@ -17590,71 +17590,71 @@ Index: libunwind/src/ptrace/_UPT_reg_offset.c
      [UNW_AARCH64_PSTATE]   = 0x108
 -#elif defined(UNW_TARGET_S390X)
 +#elif defined(UNW_TARGET_SW_64)
-++    [UNW_SW_64_R0] = 0x00,
-++    [UNW_SW_64_R1] = 0x1, 
-++    [UNW_SW_64_R2] = 0x2, 
-++    [UNW_SW_64_R3] = 0x3, 
-++    [UNW_SW_64_R4] = 0x4, 
-++    [UNW_SW_64_R5] = 0x5, 
-++    [UNW_SW_64_R6] = 0x6, 
-++    [UNW_SW_64_R7] = 0x7, 
-++    [UNW_SW_64_R8] = 0x8, 
-++    [UNW_SW_64_R9] = 0x9, 
-++    [UNW_SW_64_R10] = 10, 
-++    [UNW_SW_64_R11] = 11, 
-++    [UNW_SW_64_R12] = 12,
-++    [UNW_SW_64_R13] = 13,
-++    [UNW_SW_64_R14] = 14,
-++    [UNW_SW_64_R15] = 0xf,
-++    [UNW_SW_64_R16] = 0x10,
-++    [UNW_SW_64_R17] = 0x11,
-++    [UNW_SW_64_R18] = 0x12,
-++    [UNW_SW_64_R19] = 0x13,
-++    [UNW_SW_64_R20] = 0x14,
-++    [UNW_SW_64_R21] = 0x15,
-++    [UNW_SW_64_R22] = 0x16,
-++    [UNW_SW_64_R23] = 0x17,
-++    [UNW_SW_64_R24] = 0x18,
-++    [UNW_SW_64_R25] = 0x19,
-++    [UNW_SW_64_R26] = 0x1a,
-++    [UNW_SW_64_R27] = 0x1b,
-++    [UNW_SW_64_R28] = 0x1c,
-++    [UNW_SW_64_R29] = 0x1d,
-++    [UNW_SW_64_R30] = 0x1e,
-++    [UNW_SW_64_R31] = 0x1f,
-++    [UNW_SW_64_F0] = 0x20,
-++    [UNW_SW_64_F1] = 0x21,
-++    [UNW_SW_64_F2] = 0x22,
-++    [UNW_SW_64_F3] = 0x23,
-++    [UNW_SW_64_F4] = 0x24,
-++    [UNW_SW_64_F5] = 0x25,
-++    [UNW_SW_64_F6] = 0x26,
-++    [UNW_SW_64_F7] = 0x27,
-++    [UNW_SW_64_F8] = 0x28,
-++    [UNW_SW_64_F9] = 0x29,
-++    [UNW_SW_64_F10] = 0x2a,
-++    [UNW_SW_64_F11] = 0x2b,
-++    [UNW_SW_64_F12] = 0x2c,
-++    [UNW_SW_64_F13] = 0x2d,
-++    [UNW_SW_64_F14] = 0x2e,
-++    [UNW_SW_64_F15] = 0x2f,
-++    [UNW_SW_64_F16] = 0x30,
-++    [UNW_SW_64_F17] = 0x31,
-++    [UNW_SW_64_F18] = 0x32,
-++    [UNW_SW_64_F19] = 0x33,
-++    [UNW_SW_64_F20] = 0x34,
-++    [UNW_SW_64_F21] = 0x35,
-++    [UNW_SW_64_F22] = 0x36,
-++    [UNW_SW_64_F23] = 0x37,
-++    [UNW_SW_64_F24] = 0x38,
-++    [UNW_SW_64_F25] = 0x39,
-++    [UNW_SW_64_F26] = 0x3a,
-++    [UNW_SW_64_F27] = 0x3b,
-++    [UNW_SW_64_F28] = 0x3c,
-++    [UNW_SW_64_F29] = 0x3d,
-++    [UNW_SW_64_F30] = 0x3e,
-++    [UNW_SW_64_FPCR] = 0x3f,
-++    [UNW_SW_64_PC] = 0x40
++    [UNW_SW_64_R0] = 0x00,
++    [UNW_SW_64_R1] = 0x1, 
++    [UNW_SW_64_R2] = 0x2, 
++    [UNW_SW_64_R3] = 0x3, 
++    [UNW_SW_64_R4] = 0x4, 
++    [UNW_SW_64_R5] = 0x5, 
++    [UNW_SW_64_R6] = 0x6, 
++    [UNW_SW_64_R7] = 0x7, 
++    [UNW_SW_64_R8] = 0x8, 
++    [UNW_SW_64_R9] = 0x9, 
++    [UNW_SW_64_R10] = 10, 
++    [UNW_SW_64_R11] = 11, 
++    [UNW_SW_64_R12] = 12,
++    [UNW_SW_64_R13] = 13,
++    [UNW_SW_64_R14] = 14,
++    [UNW_SW_64_R15] = 0xf,
++    [UNW_SW_64_R16] = 0x10,
++    [UNW_SW_64_R17] = 0x11,
++    [UNW_SW_64_R18] = 0x12,
++    [UNW_SW_64_R19] = 0x13,
++    [UNW_SW_64_R20] = 0x14,
++    [UNW_SW_64_R21] = 0x15,
++    [UNW_SW_64_R22] = 0x16,
++    [UNW_SW_64_R23] = 0x17,
++    [UNW_SW_64_R24] = 0x18,
++    [UNW_SW_64_R25] = 0x19,
++    [UNW_SW_64_R26] = 0x1a,
++    [UNW_SW_64_R27] = 0x1b,
++    [UNW_SW_64_R28] = 0x1c,
++    [UNW_SW_64_R29] = 0x1d,
++    [UNW_SW_64_R30] = 0x1e,
++    [UNW_SW_64_R31] = 0x1f,
++    [UNW_SW_64_F0] = 0x20,
++    [UNW_SW_64_F1] = 0x21,
++    [UNW_SW_64_F2] = 0x22,
++    [UNW_SW_64_F3] = 0x23,
++    [UNW_SW_64_F4] = 0x24,
++    [UNW_SW_64_F5] = 0x25,
++    [UNW_SW_64_F6] = 0x26,
++    [UNW_SW_64_F7] = 0x27,
++    [UNW_SW_64_F8] = 0x28,
++    [UNW_SW_64_F9] = 0x29,
++    [UNW_SW_64_F10] = 0x2a,
++    [UNW_SW_64_F11] = 0x2b,
++    [UNW_SW_64_F12] = 0x2c,
++    [UNW_SW_64_F13] = 0x2d,
++    [UNW_SW_64_F14] = 0x2e,
++    [UNW_SW_64_F15] = 0x2f,
++    [UNW_SW_64_F16] = 0x30,
++    [UNW_SW_64_F17] = 0x31,
++    [UNW_SW_64_F18] = 0x32,
++    [UNW_SW_64_F19] = 0x33,
++    [UNW_SW_64_F20] = 0x34,
++    [UNW_SW_64_F21] = 0x35,
++    [UNW_SW_64_F22] = 0x36,
++    [UNW_SW_64_F23] = 0x37,
++    [UNW_SW_64_F24] = 0x38,
++    [UNW_SW_64_F25] = 0x39,
++    [UNW_SW_64_F26] = 0x3a,
++    [UNW_SW_64_F27] = 0x3b,
++    [UNW_SW_64_F28] = 0x3c,
++    [UNW_SW_64_F29] = 0x3d,
++    [UNW_SW_64_F30] = 0x3e,
++    [UNW_SW_64_FPCR] = 0x3f,
++    [UNW_SW_64_PC] = 0x40
 + #elif defined(UNW_TARGET_S390X)
      [UNW_S390X_R0]      = 0x10,
      [UNW_S390X_R1]      = 0x18,
@@ -18059,7 +18059,7 @@ Index: libunwind/include/libunwind-sw_64.h
 ===================================================================
 --- /dev/null
 +++ libunwind/include/libunwind-sw_64.h
-@@ -0,0 +1,178 @@
+@@ -0,0 +1,179 @@
 +/* libunwind - a platform-independent unwind library
 +   Copyright (C) 2008 CodeSourcery
 +
@@ -18117,6 +18117,7 @@ Index: libunwind/include/libunwind-sw_64.h
 +   ABIs, and 64-bit wide for N64 ABI. */
 +typedef uint64_t unw_word_t;
 +typedef int32_t unw_sword_t;
++#define UNW_WORD_MAX UINT64_MAX
 +
 +/* FIXME: SW_64 ABIs.  */
 +typedef long double unw_tdep_fpreg_t;
@@ -18339,7 +18340,7 @@ Index: libunwind/include/tdep-sw_64/libunwind_i.h
 ===================================================================
 --- /dev/null
 +++ libunwind/include/tdep-sw_64/libunwind_i.h
-@@ -0,0 +1,349 @@
+@@ -0,0 +1,352 @@
 +/* libunwind - a platform-independent unwind library
 +   Copyright (C) 2008 CodeSourcery
 +
@@ -18394,6 +18395,9 @@ Index: libunwind/include/tdep-sw_64/libunwind_i.h
 +    struct unw_accessors acc;
 +
 +    int big_endian;
++#ifndef UNW_REMOTE_ONLY
++    unw_iterate_phdr_func_t iterate_phdr_function;
++#endif
 +    sw_64_abi_t abi;
 +    unsigned int addr_size;
 +
@@ -19060,7 +19064,7 @@ Index: libunwind/src/sw_64/Ginit.c
 ===================================================================
 --- /dev/null
 +++ libunwind/src/sw_64/Ginit.c
-@@ -0,0 +1,203 @@
+@@ -0,0 +1,206 @@
 +/* libunwind - a platform-independent unwind library
 +   Copyright (C) 2008 CodeSourcery
 +
@@ -19247,6 +19251,9 @@ Index: libunwind/src/sw_64/Ginit.c
 +sw_64_local_addr_space_init (void)
 +{
 +  memset (&local_addr_space, 0, sizeof (local_addr_space));
++#if defined(HAVE_DL_ITERATE_PHDR)
++  local_addr_space.iterate_phdr_function = dl_iterate_phdr;
++#endif
 +  local_addr_space.big_endian = (__BYTE_ORDER == __BIG_ENDIAN);
 +  local_addr_space.abi = UNW_SW_64_ABI_N64;
 +  local_addr_space.addr_size = sizeof (void *);
